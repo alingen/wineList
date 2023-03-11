@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.winebox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.wineInfo{
+  width: 30%;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: #e0e0e0 solid;
+}
+
+// 星
+.star5_rating{
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #CCCCCC;
+}
+
+.star5_rating:before, .star5_rating:after{
+  content: '★★★★★';
+}
+
+.star5_rating:after{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32;
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; }
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } 
+.star5_rating[data-rate="2"]:after{ width: 40%; }
+.star5_rating[data-rate="1"]:after{ width: 20%; } 
+.star5_rating[data-rate="0"]:after{ width: 0%; }
+
+// wine画像
+.wineImage {
+  display: block;
+}
+
+//ロード画面
+.loading {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+.loading .hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms;
+}
+.loading .circle {
+  display: block;
+  position: relative;
+  top: calc( 50% - 20px );
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 8px solid #78dce1;
+  border-top: 7px solid #bddcea;
+  border-radius: 50px;
+  animation: loading 700ms linear 0ms infinite normal both;
+}
+@keyframes loading {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}

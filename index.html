@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ワインAPI課題</title>
+  </head>
+  <body>
+    <h1>wineのAPI課題</h1>
+    <form id="winebox">
+      <label><input type="radio" name="wine" value="reds" checked>赤ワイン</label>
+      <label><input type="radio" name="wine" value="whites">白ワイン</label>
+      <label><input type="radio" name="wine" value="sparkling">スパークリング</label>
+      <label><input type="radio" name="wine" value="dessert">デザート</label>
+      <label><input type="radio" name="wine" value="port">ポート</label>
+    </form>
+    <div class="winebox" id="js-wineList"></div>
+    <div class="loading">
+      <span class="circle"></span>
+    </div>
+    <div id="root"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
